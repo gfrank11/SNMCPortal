@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SNMCPortal", "SNMCPortal\SNMCPortal.csproj", "{06107660-81BF-4587-89D6-AE0C5DE41D58}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{9CAD819C-E0B5-42DF-8C9E-333FC3AD6C32}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SNMCWebAPI", "SNMCWebAPI\SNMCWebAPI.csproj", "{4304B412-7F61-405F-BDB8-2210C30824A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SNMCDataManager", "SNMCDataManager\SNMCDataManager.csproj", "{2A31C172-C73C-42BD-8A96-6983B48BB6E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SNMCPortalTests", "SNMCPortalTests\SNMCPortalTests.csproj", "{5320B073-8819-4447-BC34-1374DF7CD3AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{528EE265-FF52-4E70-AB23-C372C5457546}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		SNMCPortal.vsmdi = SNMCPortal.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = SNMCPortal.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06107660-81BF-4587-89D6-AE0C5DE41D58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06107660-81BF-4587-89D6-AE0C5DE41D58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06107660-81BF-4587-89D6-AE0C5DE41D58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06107660-81BF-4587-89D6-AE0C5DE41D58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4304B412-7F61-405F-BDB8-2210C30824A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4304B412-7F61-405F-BDB8-2210C30824A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4304B412-7F61-405F-BDB8-2210C30824A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4304B412-7F61-405F-BDB8-2210C30824A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A31C172-C73C-42BD-8A96-6983B48BB6E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A31C172-C73C-42BD-8A96-6983B48BB6E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A31C172-C73C-42BD-8A96-6983B48BB6E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A31C172-C73C-42BD-8A96-6983B48BB6E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5320B073-8819-4447-BC34-1374DF7CD3AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5320B073-8819-4447-BC34-1374DF7CD3AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5320B073-8819-4447-BC34-1374DF7CD3AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5320B073-8819-4447-BC34-1374DF7CD3AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

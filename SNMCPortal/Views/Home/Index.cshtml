@@ -1,0 +1,15 @@
+﻿@model IEnumerable<SNMCPortal.Models.QuadrantRoute>
+@{
+    ViewBag.Title = "Home Page"; 
+}
+@if (@User.Identity.IsAuthenticated)
+{
+    ViewBag.ReturnUrl = Url.Action("Index", "Home");
+    @Html.Partial("_Quadrants", Model);
+}
+else
+{
+    ViewBag.ReturnUrl = Url.Action("Index", "Home");
+    @Html.Partial("_Authentication");
+}
+ 

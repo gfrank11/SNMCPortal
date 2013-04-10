@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="UserDefinedDataAreaModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="UserDefinedDataAreaModelStoreContainer">
+          <EntitySet Name="UserDefinedDataArea" EntityType="UserDefinedDataAreaModel.Store.UserDefinedDataArea" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="UserDefinedDataArea">
+          <Key>
+            <PropertyRef Name="recId" />
+          </Key>
+          <Property Name="recId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="activeDirLogin" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="areaId" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="targetUrl" Type="nvarchar" Nullable="false" MaxLength="256" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="UserDefinedDataAreaModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="UserDefinedDataAreaContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="UserDefinedDataAreas" EntityType="UserDefinedDataAreaModel.UserDefinedDataArea" />
+        </EntityContainer>
+        <EntityType Name="UserDefinedDataArea">
+          <Key>
+            <PropertyRef Name="recId" />
+          </Key>
+          <Property Name="activeDirLogin" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="areaId" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="targetUrl" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Type="Int32" Name="recId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="UserDefinedDataAreaModelStoreContainer" CdmEntityContainer="UserDefinedDataAreaContext">
+          <EntitySetMapping Name="UserDefinedDataAreas">
+            <EntityTypeMapping TypeName="UserDefinedDataAreaModel.UserDefinedDataArea">
+              <MappingFragment StoreEntitySet="UserDefinedDataArea">
+                <ScalarProperty Name="recId" ColumnName="recId" />
+                <ScalarProperty Name="activeDirLogin" ColumnName="activeDirLogin" />
+                <ScalarProperty Name="areaId" ColumnName="areaId" />
+                <ScalarProperty Name="targetUrl" ColumnName="targetUrl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="UserDefinedDataAreaModel">
+        <EntityTypeShape EntityType="UserDefinedDataAreaModel.UserDefinedDataArea" Width="1.5" PointX="0.75" PointY="0.75" Height="1.59568359375" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,19 @@
+﻿@model IEnumerable<SNMCPortal.Models.QuadrantRoute>
+@{
+    ViewBag.Title = "Home Page";  
+ }
+<div id="Quadrants">
+<div id="upper-left" class="quadrant">Upper Left</div>
+<div id="upper-right" class="quadrant">Upper Right</div>
+<div id="lower-left" class="quadrant">Lower Left</div>
+<div id="lower-right" class="quadrant">Lower Right</div>
+ @foreach (var route in Model)
+ {
+     if (Url.IsLocalUrl(route.Route))
+     { 
+        <script type="text/javascript">
+            $('#' + '@route.QuadrantName').load('@route.Route');
+        </script>
+     }
+ }
+ </div>

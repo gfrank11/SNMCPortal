@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/bundles/SNMCPortal")
+    </head>
+    <body>
+        <div id="header">
+            @{Html.RenderAction("UserName","Home");}
+            <span id = header-title>Security National Web Portal</span>
+            <div id="inner-header">
+                <a id="logo" href="#">
+                    <img src="~/Images/logo.png" alt="Security National Mortgage" />
+                </a>
+                <img id="slogan" src="~/Images/slogan.png" alt="&quot;Our Motto Is Excellence&quot;"/>
+                <span id="mlsno">CO. NMLS#3116</span>
+            </div>
+               @* <div id="phone">Questions? Call us:<strong>1-855-347-5626</strong></div> 
+			    <div id="social">
+					    <span>Socialize with us:</span>
+					    &nbsp;<a href="http://twitter.com/snmcloans" target="_blank"><img alt="twitter" src="Images/twitter.png"></a>
+					    &nbsp;<a href="http://www.facebook.com/SNational" target="_blank"><img alt="facebook" src="Images/facebook.png"></a>
+					    &nbsp;<a href="http://www.linkedin.com/company/1331901?trk=tyah" target="_blank"><img alt="linkedin" src="Images/linkedin.png"></a>
+			    </div>	
+             		*@	
+            @Html.Partial("_MainMenu");
+        </div>
+        <div id="body">
+            <div id="main-content">
+                @RenderBody()
+            </div>
+        </div>
+       
+        <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
+                </div>
+            </div>
+        </footer>
+        @RenderSection("scripts", required: false)
+    </body>
+</html>
